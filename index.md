@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/ramirolopescanadell/ramirolopescanadell.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ramirolopescanadell/ramirolopescanadell.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<!DOCTYPE html>
+<html>
+<head>
+	<title> La Vobira</title>
+	<link href="css/estilos.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+	<link rel="shortcur icon" href="css/imagenes/logo.png" class="logo" >
+</head>
+<body>
+	<!-- <div class="botonMutear"> <img src="css/imagenes/fruta.jpg" onclick="mutear()"> </div> -->
+	<header> <img src="https://fontmeme.com/permalink/200726/c77ea4fead3820a19662f3ec7534f0e1.png" alt="fuentes-pixeladas" border="0"></header>
+	<div class="contador"> <p>Frutas comidas</p>  <p id="contador" class="frutasComidas" > </p> </div>
+	<div id="emergente"> <img src="https://fontmeme.com/permalink/200726/691f4f60accc7d576c8b2c04bbe878a4.png" alt="fuentes-pixeladas" border="0"></div>
+	<div class= "principal" >
+		<a onclick="iniciar()" id="botonIniciar"><img src="https://fontmeme.com/permalink/200727/0600ca2540ce66e9c95c9eb71764239d.png" alt="fuentes-pixeladas" border="0"></a>
+		<table id="luces">
+			<tbody>
+				<?php $id = 1; 
+		 		for ($i=1; $i <= 22; $i++): ?>
+		 			<tr>
+		 			<?php for ($j=1; $j <= 40; $j++): ?>
+		 				<td id="<?php echo $id ?>"> <?php $id++ ?> </td>
+		 			<?php endfor?>
+		 			</tr>	
+		 		<?php endfor?>
+			</tbody>
+		</table>
+	</div>
+</body>
+<script src="js/js.js" type="text/javascript"> </script>
+</html>
