@@ -142,6 +142,9 @@ function comer(){
 		document.getElementById("contador").innerHTML = "X" + frutasComidas;
 		document.getElementById(fruta).style.backgroundImage= null;
 		fruta = Math.floor(Math.random() * cantCeldas + 1);
+		while(vivora.includes(fruta)){
+			fruta = Math.floor(Math.random() * cantCeldas + 1);
+		}
 		aparecePoder--;
 		if(aparecePoder == 1){
 			document.getElementById(fruta).style.backgroundImage= "url('css/imagenes/estrella.jpg')";
