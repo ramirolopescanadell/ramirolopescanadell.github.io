@@ -15,17 +15,29 @@
 		<a onclick="iniciar()" id="botonIniciar"><img src="https://fontmeme.com/permalink/200727/0600ca2540ce66e9c95c9eb71764239d.png" alt="fuentes-pixeladas" border="0"></a>
 		<table id="luces">
 			<tbody>
-				<?php $id = 1; 
-		 		for ($i=1; $i <= 22; $i++): ?>
-		 			<tr>
-		 			<?php for ($j=1; $j <= 40; $j++): ?>
-		 				<td id="<?php echo $id ?>"> <?php $id++ ?> </td>
-		 			<?php endfor?>
-		 			</tr>	
-		 		<?php endfor?>
+
 			</tbody>
 		</table>
 	</div>
 </body>
 <script src="js/js.js" type="text/javascript"> </script>
+<script type="text/javascript">
+	const tbody = document.querySelector("tbody");
+
+	let id = 1;	
+
+	for (let i = 1; i <= 22; i++) {
+		const tr = document.createElement("tr");
+
+		for (let j = 1; j <= 40; j++) {
+			const td = document.createElement("td");
+			td.id = id;
+			id++;
+
+			tr.appendChild(td);
+		}
+
+		tbody.appendChild(tr);
+	}
+</script>
 </html>
